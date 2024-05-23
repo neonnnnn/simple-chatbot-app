@@ -1,0 +1,9 @@
+{
+ "model_name":"microsoft/DialoGPT-medium",
+ "do_lower_case":true,
+ "save_mode":"pretrained",
+ "max_length":300,
+ "num_beams": 20,
+ "do_sample": true,
+ "early_stopping": true
+}

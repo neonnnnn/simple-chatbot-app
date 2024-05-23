@@ -1,0 +1,16 @@
+version: "3.8"
+services:
+  web-fe:
+    build: streamlit/.
+    ports:
+      - target: 8501
+        published: 8501
+    networks:
+      - chatbot-net
+  model-api:
+    build: torchserve/.
+    networks:
+      - chatbot-net
+      
+networks:
+  chatbot-net:
