@@ -20,6 +20,8 @@ docker compose up
 
 Then, the simple chatbot app runs on <http://localhost:8501/>.
 
+You can change the underlying LLM by fixing `"model_name"` in `torchserve/setup_confing.json` (additionaly it might be required to fix the `setup.sh` (the model archiving part)).
+
 ## References
 
 - [Build a bsic LLM chat app](https://docs.streamlit.io/develop/tutorials/llms/build-conversational-apps)
