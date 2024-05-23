@@ -1,7 +1,7 @@
 FROM pytorch/torchserve:latest-cpu
 
 WORKDIR /torchserve
-COPY --chown=model-server . /torchserve 
+COPY --chown=model-server . /torchserve
 USER model-server
 RUN ./setup.sh
 EXPOSE 8080

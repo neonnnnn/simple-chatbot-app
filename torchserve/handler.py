@@ -85,10 +85,11 @@ class TransformersConversationHandler(BaseHandler, ABC):
     def preprocess(self, requests):
         """Basic text preprocessing, based on the user's chocie of application mode.
         Args:
-            requests (str): The Input data in the form of text is passed on to the preprocess
-            function.
+            requests (str): The Input data in the form of text is passed on to the
+            preprocess function.
         Returns:
-            list : The preprocess function returns a list of Tensor for the size of the word tokens.
+            list : The preprocess function returns a list of Tensor for the size of
+            the word tokens.
         """
         input_texts = []
         for data in requests:
@@ -107,7 +108,8 @@ class TransformersConversationHandler(BaseHandler, ABC):
         """Predict the class (or classes) of the received text using the
         serialized transformers checkpoint.
         Args:
-            input_batch (list): List of Text Tensors from the pre-process function is passed here
+            input_batch (list): List of Text Tensors from the pre-process function
+            is passed here
         Returns:
             list : It returns a list of the predicted value for the input text
         """
@@ -122,9 +124,11 @@ class TransformersConversationHandler(BaseHandler, ABC):
             return ["Now initializing. Please try again later."]
 
     def postprocess(self, inference_output):
-        """Post Process Function converts the predicted response into Torchserve readable format.
+        """Post Process Function converts the predicted response into Torchserve
+        readable format.
         Args:
-            inference_output (list): It contains the predicted response of the input text.
+            inference_output (list): It contains the predicted response of the
+            input text.
         Returns:
             (list): Returns a list of the Predictions and Explanations.
         """

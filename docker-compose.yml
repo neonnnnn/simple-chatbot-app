@@ -11,6 +11,6 @@ services:
     build: torchserve/.
     networks:
       - chatbot-net
-      
+
 networks:
   chatbot-net:

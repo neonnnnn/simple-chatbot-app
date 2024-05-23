@@ -14,8 +14,8 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 def transformers_model_downloader(
     pretrained_model_name, do_lower_case, dir="./download"
 ):
-    """This function, save the checkpoint, config file along with tokenizer config and vocab files
-    of a transformer model of your choice.
+    """This function, save the checkpoint, config file along with tokenizer config
+    and vocab files of a transformer model of your choice.
     """
     print(f"Download model and tokenizer {pretrained_model_name}")
     # loading pre-trained model and tokenizer
@@ -27,7 +27,8 @@ def transformers_model_downloader(
         pretrained_model_name, do_lower_case=do_lower_case
     )
 
-    # NOTE : for demonstration purposes, we do not go through the fine-tune processing here.
+    # NOTE : for demonstration purposes, we do not go through the fine-tune
+    # processing here.
     # A Fine_tunining process based on your needs can be added.
     # An example of  Fine_tuned model has been provided in the README.
     try:
@@ -38,7 +39,7 @@ def transformers_model_downloader(
         print(f"Successfully created directory {dir}")
 
     print(
-        "Save model and tokenizer/ Torchscript model based on the setting from setup_config",
+        "Save model and tokenizer based on the setting from setup_config",
         pretrained_model_name,
         "in directory",
         dir,

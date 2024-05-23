@@ -1,8 +1,9 @@
 import json
 
 import requests
-from streamlit.logger import get_logger
+
 import streamlit as st
+from streamlit.logger import get_logger
 
 model_api_url = "http://model-api:8080/predictions/my_tc"
 
